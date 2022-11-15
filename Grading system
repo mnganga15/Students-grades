@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i;
+    float mark, sum=0, avg;
+    printf("Enter Marks obtained in 5 Subjects: ");
+    for(i=0; i<5; i++)
+    {
+        scanf("%f", &mark);
+        sum = sum+mark;
+    }
+    avg = sum/5;
+    printf("\nGrade = ");
+    if(avg>=70 && avg<=100)
+        printf("pass");
+    else if(avg>=60 && avg<69)
+        printf("A2");
+    else if(avg>=50 && avg<59)
+        printf("B1");
+    else if(avg>=40 && avg<49)
+        printf("B2");
+    else if(avg>=39 && avg<0)
+        printf("C1");
+    else
+        printf("Invalid!");
+    getch();
+    return 0;
+}
